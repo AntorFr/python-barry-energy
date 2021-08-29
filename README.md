@@ -57,6 +57,9 @@ class BarryEnergyAPI(builtins.object)
  |      Returns the hourly spot price on market_zone for the
  |      given dates.
  |      Warning: dates are assumed UTC
+ | totalKwhPrice(self, date_start: datetime, date_end: datetime, mpid: int)
+ |      Returns the total KwH price (inc. grid fees, tarrifs, subscription and spot price)
+ |      for a metering point.
  |  
  | hourlykWhPrice(self, date: datetime, mpid: int)
  |      Returns the total kWh price (currency/kWh)
@@ -74,7 +77,7 @@ class BarryEnergyAPI(builtins.object)
  |  yesterday_end (equivalent to today_start)
  |      Returns the date of the end of yesterday
  |  
- |  yesterday_start
+ |  yesterday_start 
  |      Returns the date of the start of yesterday
  |
  |  today_start (equivalent to yesterday_end)
